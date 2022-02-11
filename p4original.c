@@ -14,6 +14,7 @@ void input_array(int n,int a[n])
     scanf("%d",&a[i]);
   }
 }
+
 int sum_composite_numbers(int n,int a[n])
 {
   int sum=0;
@@ -23,6 +24,7 @@ int sum_composite_numbers(int n,int a[n])
   {
     return 1; 
   }
+
   sum+=a[i];
   }
   return sum;

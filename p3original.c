@@ -6,30 +6,34 @@ int input_number()
   scanf("%d",&n);
   return n;
 }
-int is_composite(int n)
+int is_composite(int n,int composite)
 {
-  for(int i=2;i<=n/2;i++)
+   composite=0;
+  for(int i=1;i<=n;i++)
   {
     if(n%i==0)
-    return 1;
+    {
+      composite +=1;
+    }
   }
+  return composite;
 }
-void output(int n,int composite)
+void output(int n,int result)
 {
-  if(composite==1)
+  if(result>2)
   {
-    printf("the number is composite %d\n",n);
+    printf("the number %d is composite\n",n);
   }
   else
   {
-    printf("the number is not composite %d\n",n);
+    printf("the number %d is not composite \n",n);
   }
 }
 int main()
 {
-  int n,c;
+  int n,composite,result;
   n=input_number();
-  is_composite(n);
-  output(n,c);
+  is_composite(n,composite);
+  output(n,result);
   return 0;
 }
