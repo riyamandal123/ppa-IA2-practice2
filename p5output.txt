@@ -1,1 +1,33 @@
-
+Breakpoint 1, main () at p5original.c:41
+41    a = input();
+(gdb) n
+Enter a number:
+20
+42    b = input();
+(gdb) n
+Enter a number:
+8
+43    gcd = find_gcd(a,b);
+(gdb) n
+44    output(a, b, gcd);
+(gdb) s
+output (a=20, b=8, gcd=4) at p5original.c:35
+35    printf("The gcd of %d and %d is %d\n", a, b, gcd);
+(gdb) n
+The gcd of 20 and 8 is 4
+36  }
+(gdb) n
+main () at p5original.c:45
+45    return 0;
+(gdb) n
+46  }(gdb) p a
+$1 = 20
+(gdb) p b
+$2 = 8
+(gdb) l
+41    a = input();
+42    b = input();
+43    gcd = find_gcd(a,b);
+44    output(a, b, gcd);
+45    return 0;
+46  }(gdb) 
