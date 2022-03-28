@@ -1,1 +1,40 @@
-
+Breakpoint 1, main () at p1original.c:17
+17  {
+(gdb) n
+19    input(&b,&h);
+(gdb) n
+enter the base and height of a triangle
+6
+4
+20    find_area(b,h,&area);
+(gdb) s
+find_area (base=6, height=4, area=0x7ffde3425f04) at p1original.c:10
+10    *area=((base)* (height))*0.5;
+(gdb) n
+11  }
+(gdb) n
+main () at p1original.c:21
+21    output(b,h,area);
+(gdb) s
+output (base=6, height=4, area=12) at p1original.c:14
+14    printf("area of a triangle is %f\n",area);
+(gdb) n
+area of a triangle is 12.000000
+15  }
+(gdb) n
+main () at p1original.c:22
+22    return 0;
+(gdb) n
+24  }(gdb) p base
+No symbol "base" in current context.
+(gdb) p b
+$1 = 6
+(gdb) p h
+$2 = 4
+(gdb) l
+19    input(&b,&h);
+20    find_area(b,h,&area);
+21    output(b,h,area);
+22    return 0;
+23
+24  }(gdb) 
