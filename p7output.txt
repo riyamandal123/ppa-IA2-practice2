@@ -1,1 +1,28 @@
-
+Breakpoint 1, main () at p7original.c:27
+27  {
+(gdb) n
+28    Triangle t = input_triangle();
+(gdb) n
+Enter the base, altitude of a triangle:
+4
+3
+29   find_area(&t);
+(gdb) s
+find_area (t=0x7ffc512d59bc) at p7original.c:18
+18    t->area = 0.5 *t->base * t->altitude;
+(gdb) n
+19
+(gdb) n
+main () at p7original.c:30
+30   output(t);
+(gdb) s
+output (t=...) at p7original.c:23
+23   printf("The area of triangle with base = %f and altitude = %f is %f\n", t.base, t.altitude, t.area);
+(gdb) n
+The area of triangle with base = 4.000000 and altitude = 3.000000 is 6.000000
+24
+(gdb) n
+main () at p7original.c:31
+31   return 0;
+(gdb) n
+(gdb) 
