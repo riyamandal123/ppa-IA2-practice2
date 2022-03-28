@@ -1,1 +1,36 @@
-
+Breakpoint 1, main () at p2original.c:28
+28    a=input_side();
+(gdb) n
+enter a number
+3
+29    b=input_side();
+(gdb) n
+enter a number
+4
+30    c=input_side();
+(gdb) n
+enter a number
+6
+31    s=check_scalene(a,b,c); 
+(gdb) s
+check_scalene (a=3, b=4, c=6) at p2original.c:11
+11    return( a!=b && b!=c && c!=a);
+(gdb) n
+13  }
+(gdb) n
+main () at p2original.c:32
+32    output(a,b,c,s);
+(gdb) s
+output (a=3, b=4, c=6, result=1) at p2original.c:16
+16    if(result==1)
+(gdb) n
+18      printf("triangle with sides %d %d %d is scalene\n",a,b,c);
+(gdb) n
+triangle with sides 3 4 6 is scalene
+24  }
+(gdb) n
+main () at p2original.c:33
+33    return 0;
+(gdb) n
+34  }
+(gdb) 
